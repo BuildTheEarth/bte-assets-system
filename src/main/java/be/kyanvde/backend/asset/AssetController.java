@@ -42,7 +42,7 @@ public class AssetController {
 
         return repository.findById(id)
                 .map(asset -> {
-                    asset.setCategory(newAsset.getCategory());
+                    asset.setCategoryId(newAsset.getCategoryId());
                     asset.setName(newAsset.getName());
                     asset.setDescription(newAsset.getDescription());
                     asset.setImages(newAsset.getImages());

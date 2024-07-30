@@ -1,5 +1,6 @@
 package be.kyanvde.backend.asset;
 
+import be.kyanvde.backend.assetcategory.AssetCategory;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public class Asset {
     private @Id
     @GeneratedValue Long id;
 
-    private AssetCategory category;
+    private Long categoryId;
 
     private String name;
     private String description;
@@ -22,8 +23,8 @@ public class Asset {
 
     private String schematic;
 
-    public Asset(AssetCategory category, String name, String description, List<String> images, String schematic) {
-        this.category = category;
+    public Asset(Long categoryId, String name, String description, List<String> images, String schematic) {
+        this.categoryId = categoryId;
         this.name = name;
         this.description = description;
         this.images = images;
@@ -43,12 +44,12 @@ public class Asset {
         this.id = id;
     }
 
-    public AssetCategory getCategory() {
-        return category;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory(AssetCategory category) {
-        this.category = category;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getName() {
