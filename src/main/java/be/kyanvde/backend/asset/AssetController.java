@@ -54,8 +54,8 @@ public class AssetController {
                 });
     }
 
-    @DeleteMapping("/employees/{id}")
-    void deleteEmployee(@PathVariable Long id) {
+    @DeleteMapping("/assets/{id}")
+    void deleteAsset(@PathVariable Long id) {
         repository.deleteById(id);
     }
 }
