@@ -16,6 +16,7 @@ public class AssetCategoryController {
 
     // Aggregate root
     // tag::get-aggregate-root[]
+    @CrossOrigin
     @GetMapping("/assets/categories")
     List<AssetCategory> all() {
         return repository.findAll();
